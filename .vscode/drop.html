@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/drop.css">
+    <title>Document</title>
+</head>
+<style>
+  
+
+.btn{
+    /* position: relative; */
+    color:#fff;
+    cursor: pointer;
+    font-size:16px;
+    padding:10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background: rgb(78, 78, 169) ;
+}
+
+.dropdown{
+    display: none;
+    /* position: absolute; */
+    background: color #f9f9f9;
+    /* width: 30%; */
+    z-index: 1;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+}
+.dropdown a{
+    text-decoration: none;
+    color: #1c0c0c;
+    display: flex;
+    padding: 20px 10px;
+}
+.dropdown a:hover{
+    color: #fff;
+    background: rgb(140, 113, 145);
+    width: 10%;
+    border: 1px solid rgb(120, 120, 228);
+    padding: 5px;
+}
+  </style>
+
+<body>
+    <button id="show" class="btn" onclick="showOrHide()" >
+      Dropdown button
+    </button>
+    <section class="dropdown">
+    
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+   
+</section>
+<script>
+  const show = document.querySelector('.dropdown')
+
+let isClicked= true;
+
+
+let showOrHide = function(){
+    if (isClicked){
+
+        show.style.display="block";
+        isClicked = false;
+    }
+    else{
+        show.style.display = "none";
+        isClicked = true;
+    }
+}
+</script>
+
+</body>
+</html>
